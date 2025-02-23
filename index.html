@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <button class="menu-toggle" aria-label="Mobile menu">
+        <span class="hamburger"></span>
+      </button>
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXX');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CyberFeastArcade - Your hub for gaming, tech, and entertainment.">
+    <title>CyberFeastArcade</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="CyberFeastArcade - Gaming & Tech Hub">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourdomain.com/images/logo.png">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:description" content="Your ultimate source for gaming, tech, and entertainment">
+
+<!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@YourTwitterHandle">
+</head>
+<body>
+        <h1>CyberFeastArcade</h1>
+        <a href="https://www.youtube.com/@CyberFeastArcade?sub_confirmation=1" 
+   class="youtube-subscribe" 
+   target="_blank">
+  Subscribe on YouTube
+</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <img src="image.jpg" alt="Description" loading="lazy">
+            <h2>Welcome to CyberFeastArcade</h2>
+            <p>Your ultimate source for gaming, tech, and entertainment. Join the feast!</p>
+        </section>
+        
+        <section id="latest-videos">
+            <h3>Latest Videos</h3>
+            <p>Check out our newest content featuring gaming setups, tech reviews, and more!</p>
+            <a href="videos.html" class="btn">Watch Now</a>
+        </section>
+        <section id="featured-video">
+            <h3>Latest Video</h3>
+            <div class="video-wrapper">
+              <iframe width="560" height="315" 
+                      src="https://www.youtube.com/embed/CQmC3AYjFfY" 
+                      title="YouTube video player" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+              </iframe>
+            </div>
+          </section>
+        <section id="featured-review">
+            <div class="review-container">
+                <h3>Featured Review: Raspberry Pi 5 for Retro Gaming</h3>
+                <p><strong>"Is the Raspberry Pi 5 the ultimate retro gaming machine?"</strong></p>
+                <p>We put it to the test, building a powerful yet budget-friendly gaming console. Watch the full breakdown and review.</p>
+                <a href="reviews.html" class="btn">Read More</a>
+            </div>
+        </section>        
+    </main>
+    <section id="newsletter">
+        <h3>Join Our Newsletter</h3>
+        <form action="https://your-email-service.com/subscribe" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+      <footer>
+        <p>&copy; <span id="current-year"></span> CyberFeastArcade</p>
+        <div class="social-links">
+          <a href="https://youtube.com/yourchannel">YouTube</a> | 
+          <a href="https://twitter.com/yourhandle">Twitter</a> | 
+          <a href="https://instagram.com/yourhandle">Instagram</a>
+        </div>
+        <div class="legal-links">
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="terms.html">Terms of Service</a>
+        </div>
+        <a href="dmca.html">DMCA Policy</a>
+      </footer>
+    <script src="scripts.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+      </script>
+</body>
+</html>
