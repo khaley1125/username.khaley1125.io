@@ -1,36 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TL95KEW8LY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TL95KEW8LY');
-</script>
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL95KEW8LY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TL95KEW8LY');
+    </script>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Watch the latest videos from CyberFeastArcade covering gaming, tech, and more.">
     <title>Videos - CyberFeastArcade</title>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Video Grid Styles */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 1rem 0;
+        }
+
+        .video-title {
+            color: #4CAF50;
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .video-meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-description {
+            color: #ccc;
+            line-height: 1.4;
+        }
+
+        /* Subscribe Button */
+        .youtube-subscribe {
+            background: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+            transition: background 0.3s ease;
+        }
+
+        .youtube-subscribe:hover {
+            background: #cc0000;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Videos</h1>
         <a href="https://www.youtube.com/@CyberFeastArcade?sub_confirmation=1" 
-   class="youtube-subscribe" 
-   target="_blank">
-  Subscribe on YouTube
-</a>
+           class="youtube-subscribe" 
+           target="_blank">
+          Subscribe on YouTube
+        </a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -42,12 +122,71 @@
             </ul>
         </nav>
     </header>
+    
     <main>
-        <section>
-            <h2>Latest Videos</h2>
-            <p>Explore our latest content covering gaming setups, tech reviews, and tutorials.</p>
+        <section class="video-grid">
+            <!-- Video 1 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h2 class="video-title">Building the Ultimate Retro Pi 5 Setup</h2>
+                    <div class="video-meta">
+                        <span>Published: 2023-08-15</span> | 
+                        <span>Views: 25K</span>
+                    </div>
+                    <p class="video-description">
+                        Full walkthrough of my Raspberry Pi 5 retro gaming build, including case mods 
+                        and performance benchmarks.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h2 class="video-title">Top 5 Gaming Keyboards 2023</h2>
+                    <div class="video-meta">
+                        <span>Published: 2023-08-08</span> | 
+                        <span>Views: 18K</span>
+                    </div>
+                    <p class="video-description">
+                        Comprehensive review of the best mechanical keyboards for gaming, including 
+                        sound tests and switch comparisons.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h2 class="video-title">Custom PC Build: Cyberpunk Theme</h2>
+                    <div class="video-meta">
+                        <span>Published: 2023-08-01</span> | 
+                        <span>Views: 32K</span>
+                    </div>
+                    <p class="video-description">
+                        Creating a fully customized Cyberpunk 2077 themed gaming rig with RGB lighting 
+                        and custom water cooling.
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; <span id="current-year"></span> CyberFeastArcade</p>
         <div class="social-links">
@@ -60,9 +199,10 @@
           <a href="terms.html">Terms of Service</a> |
           <a href="dmca.html">DMCA Policy</a>
         </div>
-      </footer>
-      <script>
+    </footer>
+
+    <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
-      </script>
+    </script>
 </body>
 </html>
