@@ -192,3 +192,66 @@ footer {
     border-radius: 5px;
     margin: 15px 0;
 }
+/* Add this to your styles.css */
+footer {
+    background: #0a0a0a;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #1a1a1a;
+}
+
+.social-links a {
+    color: #4CAF50; /* Cyber green */
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-links a:hover {
+    color: #76ff03; /* Neon green */
+    text-shadow: 0 0 8px rgba(118, 255, 3, 0.4);
+}
+
+.social-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: #76ff03;
+    transition: width 0.3s ease;
+}
+
+.social-links a:hover::after {
+    width: 100%;
+}
+
+.legal-links a {
+    color: #888;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin: 0 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #ccc;
+}
+
+/* Optional: Style the separators */
+.social-links,
+.legal-links {
+    margin: 1rem 0;
+}
+
+.social-links a:not(:last-child)::after,
+.legal-links a:not(:last-child)::after {
+    content: "|";
+    color: #333;
+    margin-left: 1rem;
+    position: static;
+    background: none;
+}
