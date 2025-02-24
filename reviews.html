@@ -24,64 +24,115 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <style>
-            /* Video Grid Styles */
+            /* Updated Video Grid Styles */
             .video-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
                 gap: 2rem;
                 padding: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
             }
     
-            .video-card {
-                background: #1a1a1a;
-                border-radius: 8px;
-                padding: 1rem;
-                transition: transform 0.3s ease;
+            .review-post {
+                background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+                border-radius: 15px;
+                padding: 2rem;
+                margin: 2rem auto;
+                max-width: 1200px;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.3);
             }
     
-            .video-card:hover {
-                transform: translateY(-5px);
+            .review-header {
+                text-align: center;
+                margin-bottom: 2rem;
             }
     
-            .video-wrapper {
-                position: relative;
-                padding-bottom: 56.25%;
-                height: 0;
-                overflow: hidden;
-                border-radius: 4px;
+            .product-rating {
+                color: #FFD700;
+                font-size: 1.5rem;
+                margin: 1rem 0;
             }
     
-            .video-wrapper iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
+            .specs-table {
                 width: 100%;
-                height: 100%;
-                border: none;
+                border-collapse: collapse;
+                margin: 2rem 0;
+                background: #2a2a2a;
+                border-radius: 8px;
+                overflow: hidden;
             }
     
-            .video-info {
-                padding: 1rem 0;
+            .specs-table td {
+                padding: 1rem;
+                border-bottom: 1px solid #3a3a3a;
             }
     
-            .video-title {
-                color: #4CAF50;
-                margin: 0.5rem 0;
-                font-size: 1.2rem;
+            .specs-table tr:last-child td {
+                border-bottom: none;
             }
     
-            .video-meta {
-                color: #888;
-                font-size: 0.9rem;
-                margin-bottom: 0.5rem;
+            .pros-cons {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                margin: 2rem 0;
             }
     
-            .video-description {
-                color: #ccc;
-                line-height: 1.4;
+            .pros-list, .cons-list {
+                padding: 1.5rem;
+                border-radius: 8px;
             }
     
+            .pros-list {
+                background: rgba(76, 175, 80, 0.1);
+                border: 2px solid #4CAF50;
+            }
+    
+            .cons-list {
+                background: rgba(244, 67, 54, 0.1);
+                border: 2px solid #F44336;
+            }
+    
+            .verdict {
+                background: rgba(33, 150, 243, 0.1);
+                padding: 2rem;
+                border-radius: 8px;
+                border: 2px solid #2196F3;
+                margin: 2rem 0;
+            }
+    
+            .buy-button {
+                display: inline-block;
+                background: #4CAF50;
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: transform 0.3s ease;
+                margin: 1rem 0;
+            }
+    
+            .buy-button:hover {
+                transform: translateY(-3px);
+            }
+    
+            .product-image {
+                width: 100%;
+                max-width: 600px;
+                border-radius: 10px;
+                margin: 2rem auto;
+                display: block;
+            }
+    
+            @media (max-width: 768px) {
+                .pros-cons {
+                    grid-template-columns: 1fr;
+                }
+            }
         </style>
+        <title>Raspberry Pi 5 8GB Review - CyberFeastArcade</title>
     </head>
 <body>
     <header>
@@ -112,10 +163,70 @@
     </header>
     
     <main>
-        <section>
-            <h2>Latest Reviews</h2>
-            <p>Check out our in-depth reviews of the latest tech and gaming gear.</p>
-        </section>
+        <article class="review-post">
+            <div class="review-header">
+                <h1>Raspberry Pi 5 8GB Review: The Ultimate Mini PC?</h1>
+                <div class="product-rating">
+                    ★★★★☆
+                </div>
+                <img src="raspberry-pi5-image.jpg" alt="Raspberry Pi 5 8GB" class="product-image">
+            </div>
+
+            <table class="specs-table">
+                <tr>
+                    <td><strong>Processor</strong></td>
+                    <td>Broadcom BCM2712 2.4GHz quad-core 64-bit</td>
+                </tr>
+                <tr>
+                    <td><strong>RAM</strong></td>
+                    <td>8GB LPDDR4X-4267 SDRAM</td>
+                </tr>
+                <tr>
+                    <td><strong>Connectivity</strong></td>
+                    <td>Dual-band Wi-Fi 5, Bluetooth 5.0, Gigabit Ethernet</td>
+                </tr>
+                <tr>
+                    <td><strong>Ports</strong></td>
+                    <td>2 × USB 3.0, 2 × USB 2.0, 2 × HDMI, PCIe 2.0</td>
+                </tr>
+            </table>
+
+            <div class="pros-cons">
+                <div class="pros-list">
+                    <h3>✅ Pros</h3>
+                    <ul>
+                        <li>2-3x faster than Pi 4</li>
+                        <li>PCIe interface for expansion</li>
+                        <li>Dual 4K display support</li>
+                        <li>Improved power management</li>
+                    </ul>
+                </div>
+                <div class="cons-list">
+                    <h3>❌ Cons</h3>
+                    <ul>
+                        <li>Requires active cooling</li>
+                        <li>No built-in eMMC storage</li>
+                        <li>Power supply sold separately</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Performance Breakdown</h2>
+            <p>The Pi 5's new Broadcom chip delivers desktop-class performance, handling 4K video playback and light gaming with ease. In our benchmarks...</p>
+
+            <h2>Connectivity & Expansion</h2>
+            <p>With PCIe 2.0 support, you can now add NVMe storage or high-speed network interfaces. The dual HDMI ports make it a great media center candidate...</p>
+
+            <div class="verdict">
+                <h3>Final Verdict</h3>
+                <p>The Raspberry Pi 5 8GB is a massive leap forward, offering near-desktop performance in a credit-card sized package. While it needs careful thermal management, it's the most capable Pi yet for serious projects.</p>
+                <a href="#" class="buy-button">Buy Now ($80)</a>
+            </div>
+
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CQmC3AYjFfY" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </article>
     </main>
     <footer>
         <div class="social-grid">
