@@ -1,4 +1,6 @@
 /* styles.css */
+
+/* Variables */
 :root {
     --primary-red: #FF1A1A;
     --dark-bg: #0A0A0A;
@@ -6,8 +8,11 @@
     --text-primary: #FFFFFF;
     --text-secondary: #CCCCCC;
     --accent: #FF4D4D;
+    --hacker-green: #00ff00;
+    --hacker-green-hover: #00cc00;
 }
 
+/* Base Styles */
 body {
     background-color: var(--dark-bg);
     color: var(--text-primary);
@@ -16,28 +21,55 @@ body {
     margin: 0;
 }
 
-/* Center Content */
 .container {
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto; /* Centers the content */
-    padding: 0 1rem; /* Adds padding on small screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
+h1, h2, h3 {
+    color: var(--primary-red);
+    text-shadow: 0 0 8px rgba(255, 26, 26, 0.3);
+}
+
+p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.btn {
+    background: var(--primary-red);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--accent);
+    transform: scale(1.02);
+}
+
+/* Header Styles */
 header {
     background: #b00000;
-    padding: 1rem 0; /* Adjusted padding */
+    padding: 1rem 0;
     position: relative;
     z-index: 1000;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-header .container{ /*added container to header*/
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-h1 {
+h1.site-title {
     color: #fff;
     text-align: center;
     margin: 0;
@@ -72,6 +104,30 @@ nav ul li a:hover,
 nav ul li a.active {
     background: #ff3333;
     color: #fff;
+}
+
+.youtube-subscribe {
+    background: #ff0000;
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.youtube-subscribe:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.youtube-subscribe i {
+    font-size: 1.2em;
 }
 
 .menu-toggle {
@@ -153,163 +209,7 @@ nav ul li a.active {
         transform: rotate(-45deg);
         top: 0;
     }
-}
 
-main .container{ /*added container to main*/
-    padding: 20px 10px;
-}
-
-h1, h2, h3 {
-    color: var(--primary-red);
-    text-shadow: 0 0 8px rgba(255, 26, 26, 0.3);
-}
-
-#hero {
-    position: relative;
-    padding: 4rem 1rem;
-    text-align: center;
-    background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)),
-                url('images/hero-bg.jpg');
-    background-size: cover;
-    margin-bottom: 2rem;
-}
-
-#hero img {
-    width: 100%;
-    max-height: 600px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid var(--primary-red);
-    box-shadow: 0 0 20px rgba(255, 26, 26, 0.3);
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    margin: 1rem 0;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid var(--primary-red);
-    border-radius: 8px;
-}
-
-#newsletter {
-    background: var(--card-bg);
-    padding: 3rem 1rem;
-    margin: 2rem 0;
-    border-top: 3px solid var(--primary-red);
-    border-bottom: 3px solid var(--primary-red);
-}
-
-.newsletter-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.newsletter-form input {
-    background: var(--dark-bg);
-    border: 1px solid var(--primary-red);
-    color: var(--text-primary);
-    padding: 12px;
-    margin: 8px 0;
-    width: 100%;
-}
-
-.newsletter-form button {
-    background: var(--primary-red);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    cursor: pointer;
-    transition: all 0.3s;
-    width: 100%;
-}
-
-.newsletter-form button:hover {
-    background: var(--accent);
-    transform: scale(1.02);
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.feature-card {
-    background: var(--card-bg);
-    border: 1px solid var(--primary-red);
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: all 0.3s;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(255, 26, 26, 0.2);
-}
-
-p {
-    color: var(--text-secondary);
-    line-height: 1.7;
-    max-width: 800px;
-    margin: 1rem auto;
-}
-
-.btn {
-    background: var(--primary-red);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 4px;
-    text-decoration: none;
-    display: inline
-}
-/* styles.css (Updated Subscribe Button) */
-
-/* ... (Your existing CSS) ... */
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.youtube-subscribe {
-    background: #ff0000; /* Red background */
-    color: white !important; /* White text */
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    border: none; /* Remove default link/button border */
-}
-
-.youtube-subscribe:hover {
-    background: #cc0000; /* Darker red on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.youtube-subscribe i {
-    font-size: 1.2em;
-}
-
-/* Mobile positioning */
-@media (max-width: 768px) {
     .youtube-subscribe {
         top: 5rem;
         right: 1rem;
@@ -318,168 +218,167 @@ header .container {
     }
 }
 
-/* ... (Rest of your CSS) ... */
-/* styles.css (Updated Footer) */
-
-/* ... (Your existing CSS) ... */
-
-footer {
-    background: #0a0a0a;
+/* REPLACE THIS in <style> tag */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     padding: 2rem;
-    border-top: 3px solid #b00000;
-    margin-top: 3rem;
-    text-align: center; /* Center the footer content */
+    max-width: 1200px;
+    margin: 0 auto; /* Add this */
+    border: 1px solid var(--primary-red); /* Add cyber theme */
 }
 
-.social-grid,
-.legal-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 1rem 0;
+.video-card {
+    background: var(--card-bg); /* Use CSS variable */
+    border: 1px solid var(--primary-red); /* Add border */
 }
 
-.social-link { /* Changed from social-links a to social-link class*/
-    color: #00ff00; /* Hacker green */
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
+.video-title {
+    color: var(--primary-red); /* Use theme color instead of green */
+}
+#hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-}
-
-.social-link:hover {
-    color: #00cc00; /* Slightly darker green on hover */
-    transform: translateY(-2px);
-}
-
-.social-link i {
-    font-size: 1.2em;
-}
-
-.legal-links a {
-    color: #00ff00; /* Hacker green */
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.legal-links a:hover {
-    color: #00cc00; /* Slightly darker green on hover */
-}
-
-.copyright {
-    color: #888888;
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-}
-
-/* Mobile Footer */
-@media (max-width: 768px) {
-    .social-grid,
-    .legal-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-}
-
-/* ... (Rest of your CSS) ... */
-/* styles.css (Updated Footer Links) */
-
-/* ... (Your existing CSS) ... */
-
-footer {
-    background: #0a0a0a;
-    padding: 2rem;
-    border-top: 3px solid #b00000;
-    margin-top: 3rem;
+    justify-content: center;
     text-align: center;
+    height: 80vh;
+    padding: 20px;
 }
 
-.social-grid,
-.legal-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 1rem 0;
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: var(--hacker-green);
+    text-shadow: 0 0 10px var(--hacker-green);
 }
 
-.social-link { /* Now targeting the social-link class */
-    color: #00ff00; /* Hacker green */
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.hero-content p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 600px;
 }
-
-.social-link:hover {
-    color: #00cc00;
-    transform: translateY(-2px);
-}
-
-.social-link i {
-    font-size: 1.2em;
-}
-
-.legal-links a {
-    color: #00ff00;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.legal-links a:hover {
-    color: #00cc00;
-}
-
-.copyright {
-    color: #888888;
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-}
-
-/* Mobile Footer */
-@media (max-width: 768px) {
-    .social-grid,
-    .legal-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-}
-
-/* ... (Rest of your CSS) ... */
-/* styles.css (Updated Video Section) */
-
-/* ... (Your existing CSS) ... */
-
 .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 800px; /* or whatever max you want*/
-    margin: 1rem auto; /* added auto margin to center the video */
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    max-width: 800px; /* Limits the size */
+    margin: 0 auto; /* Centers it */
     border: 2px solid var(--primary-red);
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--card-bg);
+}
+.legal-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 20px;
 }
 
-#highlight.video-highlight{
+.legal-links a {
+    color: var(--hacker-green);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.legal-links a:hover {
+    color: var(--hacker-green-hover);
+    text-shadow: 0 0 5px var(--hacker-green-hover);
+}
+/* Center and style social media links */
+.social-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--hacker-green);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.social-link i {
+    font-size: 1.5rem;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px var(--hacker-green-hover);
+}
+.social-link {
+    font-size: 1rem; /* Reduce text size */
+    gap: 6px; /* Reduce spacing between icon and text */
+}
+
+.social-link i {
+    font-size: 1.3rem; /* Slightly smaller icons */
+}
+
+.social-link:hover {
+    transform: scale(1.05); /* Slightly smaller hover effect */
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
 }
 
-/* ... (Rest of your CSS) ... */
+.feature-card {
+    background: var(--card-bg);
+    border: 2px solid var(--primary-red);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-card i {
+    font-size: 2rem;
+    color: var(--hacker-green);
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    color: var(--primary-red);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+.btn {
+    background: var(--primary-red);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--accent);
+}
+header h1 {
+    color: var(--primary-red);
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 0 0 10px var(--primary-red);
+}
