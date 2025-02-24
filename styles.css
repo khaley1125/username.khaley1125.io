@@ -1,29 +1,53 @@
-/* CyberFeastArcade Modern Red & Black Theme */
+/* styles.css */
 :root {
-    --primary-red: #b00000;
-    --dark-red: #800000;
-    --neon-red: #ff3333;
-    --cyber-accent: #00ff9d;
-    --dark-bg: #121212;
-    --card-bg: #1a1a1a;
+    --primary-red: #FF1A1A;
+    --dark-bg: #0A0A0A;
+    --card-bg: #1A1A1A;
+    --text-primary: #FFFFFF;
+    --text-secondary: #CCCCCC;
+    --accent: #FF4D4D;
 }
 
 body {
     background-color: var(--dark-bg);
-    color: #ffffff;
+    color: var(--text-primary);
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
+    margin: 0;
 }
 
-/* Header & Navigation */
+/* Center Content */
+.container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Centers the content */
+    padding: 0 1rem; /* Adds padding on small screens */
+}
+
 header {
-    background: var(--primary-red);
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #b00000;
+    padding: 1rem 0; /* Adjusted padding */
     position: relative;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+header .container{ /*added container to header*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    background: #800000;
+    padding: 1rem 0;
 }
 
 nav ul {
@@ -32,46 +56,42 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    background: var(--dark-red);
-}
-
-nav ul li {
-    margin: 0 15px;
-    padding: 15px 0;
+    gap: 2rem;
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s;
-    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: var(--neon-red);
+nav ul li a:hover,
+nav ul li a.active {
+    background: #ff3333;
+    color: #fff;
 }
 
-/* Mobile Menu */
 .menu-toggle {
     display: none;
-    background: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
     border: none;
     cursor: pointer;
-    padding: 15px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+    z-index: 1001;
 }
 
 .hamburger {
     display: block;
-    width: 25px;
+    width: 30px;
     height: 3px;
-    background: white;
+    background: #fff;
     position: relative;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
 .hamburger::before,
@@ -80,120 +100,18 @@ nav ul li a:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: white;
-    transition: all 0.3s;
+    background: #fff;
+    transition: all 0.3s ease;
 }
 
-.hamburger::before { top: -8px; }
-.hamburger::after { top: 8px; }
-
-/* Main Content */
-main {
-    padding: 20px;
-    text-align: center;
+.hamburger::before {
+    top: -8px;
 }
 
-section {
-    background: var(--card-bg);
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
-    max-width: 1200px;
+.hamburger::after {
+    top: 8px;
 }
 
-/* Cards & Grids */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.feature-card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: all 0.3s;
-    border: 1px solid var(--primary-red);
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.3);
-}
-
-/* Buttons & CTAs */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: var(--primary-red);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.3s;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.btn:hover {
-    background: var(--neon-red);
-    box-shadow: 0 4px 12px rgba(255, 51, 51, 0.4);
-}
-
-.youtube-subscribe {
-    background: #ff0000;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 4px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 15px 0;
-    transition: all 0.3s;
-}
-
-.youtube-subscribe:hover {
-    background: #cc0000;
-    transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-    background: var(--primary-red);
-    padding: 2rem;
-    text-align: center;
-    border-top: 2px solid var(--neon-red);
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-weight: bold;
-    transition: all 0.3s;
-    display: inline-block;
-    padding: 8px 0;
-}
-
-.social-links a:hover {
-    color: var(--cyber-accent);
-    transform: translateY(-2px);
-}
-
-.legal-links a {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-    text-decoration: none;
-    margin: 0 0.8rem;
-    transition: all 0.3s;
-}
-
-.legal-links a:hover {
-    color: var(--cyber-accent);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -205,16 +123,21 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--dark-red);
+        background: #800000;
         padding: 1rem;
-        text-align: center;
-        z-index: 1000;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
     nav.active ul {
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 1rem;
     }
 
     .menu-toggle.active .hamburger {
@@ -232,33 +155,331 @@ footer {
     }
 }
 
-/* Legal Pages */
-.privacy-policy,
-.terms-service,
-.dmca-policy {
-    max-width: 800px;
+main .container{ /*added container to main*/
+    padding: 20px 10px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-red);
+    text-shadow: 0 0 8px rgba(255, 26, 26, 0.3);
+}
+
+#hero {
+    position: relative;
+    padding: 4rem 1rem;
+    text-align: center;
+    background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)),
+                url('images/hero-bg.jpg');
+    background-size: cover;
+    margin-bottom: 2rem;
+}
+
+#hero img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--primary-red);
+    box-shadow: 0 0 20px rgba(255, 26, 26, 0.3);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-red);
+    border-radius: 8px;
+}
+
+#newsletter {
+    background: var(--card-bg);
+    padding: 3rem 1rem;
+    margin: 2rem 0;
+    border-top: 3px solid var(--primary-red);
+    border-bottom: 3px solid var(--primary-red);
+}
+
+.newsletter-form {
+    max-width: 500px;
     margin: 0 auto;
-    padding: 20px;
 }
 
-.privacy-policy h2,
-.terms-service h2,
-.dmca-policy h2 {
-    border-bottom: 2px solid var(--neon-red);
-    padding-bottom: 10px;
-}
-
-.privacy-policy h3,
-.terms-service h3,
-.dmca-policy h3 {
-    color: var(--cyber-accent);
-    margin-top: 20px;
-}
-
-.dmca-policy .contact-info {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    border-radius: 5px;
-    margin: 15px 0;
+.newsletter-form input {
+    background: var(--dark-bg);
     border: 1px solid var(--primary-red);
+    color: var(--text-primary);
+    padding: 12px;
+    margin: 8px 0;
+    width: 100%;
 }
+
+.newsletter-form button {
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.newsletter-form button:hover {
+    background: var(--accent);
+    transform: scale(1.02);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    border: 1px solid var(--primary-red);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 26, 26, 0.2);
+}
+
+p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.btn {
+    background: var(--primary-red);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline
+}
+/* styles.css (Updated Subscribe Button) */
+
+/* ... (Your existing CSS) ... */
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.youtube-subscribe {
+    background: #ff0000; /* Red background */
+    color: white !important; /* White text */
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    border: none; /* Remove default link/button border */
+}
+
+.youtube-subscribe:hover {
+    background: #cc0000; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.youtube-subscribe i {
+    font-size: 1.2em;
+}
+
+/* Mobile positioning */
+@media (max-width: 768px) {
+    .youtube-subscribe {
+        top: 5rem;
+        right: 1rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.9em;
+    }
+}
+
+/* ... (Rest of your CSS) ... */
+/* styles.css (Updated Footer) */
+
+/* ... (Your existing CSS) ... */
+
+footer {
+    background: #0a0a0a;
+    padding: 2rem;
+    border-top: 3px solid #b00000;
+    margin-top: 3rem;
+    text-align: center; /* Center the footer content */
+}
+
+.social-grid,
+.legal-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.social-link { /* Changed from social-links a to social-link class*/
+    color: #00ff00; /* Hacker green */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-link:hover {
+    color: #00cc00; /* Slightly darker green on hover */
+    transform: translateY(-2px);
+}
+
+.social-link i {
+    font-size: 1.2em;
+}
+
+.legal-links a {
+    color: #00ff00; /* Hacker green */
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #00cc00; /* Slightly darker green on hover */
+}
+
+.copyright {
+    color: #888888;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Mobile Footer */
+@media (max-width: 768px) {
+    .social-grid,
+    .legal-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* ... (Rest of your CSS) ... */
+/* styles.css (Updated Footer Links) */
+
+/* ... (Your existing CSS) ... */
+
+footer {
+    background: #0a0a0a;
+    padding: 2rem;
+    border-top: 3px solid #b00000;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.social-grid,
+.legal-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.social-link { /* Now targeting the social-link class */
+    color: #00ff00; /* Hacker green */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-link:hover {
+    color: #00cc00;
+    transform: translateY(-2px);
+}
+
+.social-link i {
+    font-size: 1.2em;
+}
+
+.legal-links a {
+    color: #00ff00;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #00cc00;
+}
+
+.copyright {
+    color: #888888;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Mobile Footer */
+@media (max-width: 768px) {
+    .social-grid,
+    .legal-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* ... (Rest of your CSS) ... */
+/* styles.css (Updated Video Section) */
+
+/* ... (Your existing CSS) ... */
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px; /* or whatever max you want*/
+    margin: 1rem auto; /* added auto margin to center the video */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-red);
+    border-radius: 8px;
+}
+
+#highlight.video-highlight{
+    text-align: center;
+}
+
+/* ... (Rest of your CSS) ... */

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL95KEW8LY"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,7 +9,6 @@
       gtag('config', 'G-TL95KEW8LY');
     </script>
     
-    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -19,14 +16,13 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     
-    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Watch the latest videos from CyberFeastArcade covering gaming, tech, and more.">
+    <meta name="description" content="Watch the latest videos from CyberFeastArcade covering gaming, tech, and more.");
     <title>Videos - CyberFeastArcade</title>
     
-    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Video Grid Styles */
         .video-grid {
@@ -34,8 +30,6 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .video-card {
@@ -87,125 +81,117 @@
             line-height: 1.4;
         }
 
-        /* Subscribe Button */
-        .youtube-subscribe {
-            background: #ff0000;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            margin: 10px 0;
-            transition: background 0.3s ease;
-        }
-
-        .youtube-subscribe:hover {
-            background: #cc0000;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Videos</h1>
-        <a href="https://www.youtube.com/@CyberFeastArcade?sub_confirmation=1" 
-           class="youtube-subscribe" 
-           target="_blank">
-          Subscribe on YouTube
-        </a>
+        <div class="container">
+            <button class="menu-toggle" aria-label="Mobile menu">
+                <span class="hamburger"></span>
+            </button>
+            <h1 class="site-title">CyberFeastArcade</h1>
+            <a href="https://www.youtube.com/@CyberFeastArcade?sub_confirmation=1" 
+               class="youtube-subscribe" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Subscribe to our YouTube channel">
+                <i class="fab fa-youtube"></i> Subscribe
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="videos.html">Videos</a></li>
+                <li><a href="videos.html" class="active">Videos</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <section class="video-grid">
-            <!-- Video 1 -->
-            <div class="video-card">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/vIWx-28lElU" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h2 class="video-title">Welcome to Cyberfeastarcade Introduction</h2>
-                    <div class="video-meta">
-                        <span>Published: 2023-08-15 nah</span> | 
-                        <span>Views: idk</span>
+        <div class="container">
+            <section class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/vIWx-28lElU" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
                     </div>
-                    <p class="video-description">
-                        Join me as we dive into the world of gaming, cooking, and all things tech! From reviewing the latest gadgets to whipping up quick and tasty recipes, there's always something exciting happening here.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Video 2 -->
-            <div class="video-card">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/3bafWuWXwFI" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h2 class="video-title">Behind the Scenes: My Meal Prep Routine</h2>
-                    <div class="video-meta">
-                        <span>Published: 2023-08-08 nah</span> | 
-                        <span>Views: idk</span>
+                    <div class="video-info">
+                        <h2 class="video-title">Welcome to Cyberfeastarcade Introduction</h2>
+                        <div class="video-meta">
+                            <span>Published: 2024-12</span> | 
+                            <span>Views: 71</span>
+                        </div>
+                        <p class="video-description">
+                            Join me as we dive into the world of gaming, cooking, and all things tech! From reviewing the latest gadgets to whipping up quick and tasty recipes, there's always something exciting happening here.
+                        </p>
                     </div>
-                    <p class="video-description">
-                        Ever wonder what meal prep really looks like behind the scenes? 🍳✨ Come hang out with me as I tackle my weekly meal prep routine! It’s not about being perfect – it’s about keeping it real, messy moments and all. From  cooking up my go-to meals, you’ll get a peek at how I make it work. Whether it’s a win or a total kitchen fail, it’s all part of the fun. Let’s vibe, cook, and chat along the way.
-                    </p>
                 </div>
-            </div>
-
-            <!-- Video 3 -->
-            <div class="video-card">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/CQmC3AYjFfY" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h2 class="video-title">Raspberry Pi 5 Review Power and Potential in Your Palm</h2>
-                    <div class="video-meta">
-                        <span>Published: 2023-08-01 nah</span> | 
-                        <span>Views: idk</span>
+    
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/3bafWuWXwFI" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
                     </div>
-                    <p class="video-description">
-                        The Raspberry Pi 5 is here, and it’s a game-changer! 🚀 In this in-depth review, we explore the power-packed 8GB model and test its capabilities across various use cases. From blazing-fast processing to improved graphics, the Raspberry Pi 5 delivers big performance in a compact package.
-                    </p>
+                    <div class="video-info">
+                        <h2 class="video-title">Behind the Scenes: My Meal Prep Routine</h2>
+                        <div class="video-meta">
+                            <span>Published: 2023-08-08 nah</span> | 
+                            <span>Views: idk</span>
+                        </div>
+                        <p class="video-description">
+                            Ever wonder what meal prep really looks like behind the scenes? 🍳✨ Come hang out with me as I tackle my weekly meal prep routine! It’s not about being perfect – it’s about keeping it real, messy moments and all. From  cooking up my go-to meals, you’ll get a peek at how I make it work. Whether it’s a win or a total kitchen fail, it’s all part of the fun. Let’s vibe, cook, and chat along the way.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
+    
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/CQmC3AYjFfY" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h2 class="video-title">Raspberry Pi 5 Review Power and Potential in Your Palm</h2>
+                        <div class="video-meta">
+                            <span>Published: 2023-08-01 nah</span> | 
+                            <span>Views: idk</span>
+                        </div>
+                        <p class="video-description">
+                            The Raspberry Pi 5 is here, and it’s a game-changer! 🚀 In this in-depth review, we explore the power-packed 8GB model and test its capabilities across various use cases. From blazing-fast processing to improved graphics, the Raspberry Pi 5 delivers big performance in a compact package.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
-
     <footer>
-    <p>&copy; <span id="current-year"></span> CyberFeastArcade</p>
-    <div class="social-links">
-            <a href="https://www.youtube.com/@CyberFeastArcade">
-                <i class="fab fa-youtube"></i> YouTube
-            </a> 
-            <a href="https://x.com/CyberFeastArc">
-                <i class="fab fa-x-twitter"></i> X
-            </a> 
-            <a href="https://www.instagram.com/cyberfeastarcade/">
-                <i class="fab fa-instagram"></i> Instagram
+        <div class="social-grid">
+            <a href="https://www.youtube.com/@CyberFeastArcade" class="social-link" aria-label="Our YouTube channel">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+            <a href="https://x.com/CyberFeastArc" class="social-link" aria-label="Our X/Twitter Profile">
+                <i class="fab fa-x-twitter"></i>
+                <span>X/Twitter</span>
+            </a>
+            <a href="https://www.instagram.com/cyberfeastarcade/" class="social-link" aria-label="Our Instagram Profile">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
             </a>
         </div>
-    <div class="legal-links">
-        <a href="privacy.html">Privacy Policy</a> | 
-        <a href="terms.html">Terms of Service</a> |
-        <a href="dmca.html">DMCA Policy</a>
-    </div>
-</footer>
-
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Matrix</a>
+            <a href="terms.html">Terms Protocol</a>
+            <a href="dmca.html">DMCA Firewall</a>
+        </div>
+        <p class="copyright">© <span id="current-year"></span> CyberFeastArcade</p>
+    </footer>
     <script>
+        // Auto-update copyright year
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
